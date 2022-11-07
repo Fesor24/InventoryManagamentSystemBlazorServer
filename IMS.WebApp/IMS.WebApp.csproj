@@ -7,8 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Inventories\InventoryList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\IMS.Plugins.InMemory\IMS.Plugins.InMemory.csproj" />
     <ProjectReference Include="..\IMS.UseCases\IMS.UseCases.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Inventories\InventoryList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Inventories\InventoryList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Shared\SearchInventoryComponent.razor" />
+    <None Include="Pages\InventoryList.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Inventories\" />
   </ItemGroup>
 
 </Project>

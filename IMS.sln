@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS.CoreBusiness", "IMS.Cor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IMS.Plugins", "IMS.Plugins", "{F0C42962-BB49-4609-A7EA-8FB4C4E969B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMS.Plugins.InMemory", "IMS.Plugins.InMemory\IMS.Plugins.InMemory.csproj", "{BF3D1DAA-C42E-4975-8F95-627833AC8D30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IMS.Plugins.InMemory", "IMS.Plugins.InMemory\IMS.Plugins.InMemory.csproj", "{BF3D1DAA-C42E-4975-8F95-627833AC8D30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
