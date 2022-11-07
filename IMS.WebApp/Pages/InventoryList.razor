@@ -1,5 +1,7 @@
 ﻿@page "/inventories"
 
+@inject NavigationManager navigationManager;
+
 @using IMS.WebApp.Shared
 
 
@@ -17,6 +19,12 @@
 
 </InventoriesComponent>
 
+<br />
+
+<button type="button" class="btn btn-primary" @onclick="AddInventory">
+    Add Inventory
+</button>
+
 
 
 
@@ -26,5 +34,10 @@
     private void onSearch(string searchTerm)
     {
         this.searchTerm = searchTerm;
+    }
+
+    private void AddInventory()
+    {
+        navigationManager.NavigateTo("/addinventory");
     }
 }
