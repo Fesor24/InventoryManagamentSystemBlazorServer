@@ -1,11 +1,13 @@
-﻿@foreach (var item in Inventories)
+﻿@inject NavigationManager navigationManager
+
+@foreach (var item in Inventories)
 {
     <tr>
         <td>@item.InventoryName</td>
         <td>@item.Quantity</td>
         <td>@item.Price.ToString("c")</td>
         <td>
-            <button class="btn-light" type="button">Edit</button>
+            <button class="btn-light" type="button" @onclick="@(() => EditInventory(item.InventoryId))">Edit</button>
         </td>
     </tr>
 }
@@ -13,4 +15,10 @@
 @code {
     [Parameter]
     public List<Inventory> Inventories { get; set; } = new List<Inventory>();
+
+    private void EditInventory(int id)
+    {
+        navigationManager.NavigateTo($"/editinventory/{id}");    
+
+    }
 }
