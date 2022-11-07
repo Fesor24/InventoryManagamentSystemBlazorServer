@@ -1,0 +1,24 @@
+﻿@page "/products"
+<h3>ProductsList</h3>
+
+@using IMS.WebApp.Shared
+
+<SearchProductComponent ProductNameToSearch="ProductSearchName">
+
+</SearchProductComponent>
+
+<br />
+
+<ProductListComponent searchTerm="@searchName">
+
+
+</ProductListComponent>
+
+@code {
+    private string searchName = string.Empty;
+
+    public void ProductSearchName(string name)
+    {
+        this.searchName = name;
+    }
+}

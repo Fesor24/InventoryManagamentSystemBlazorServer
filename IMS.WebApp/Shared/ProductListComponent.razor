@@ -1,0 +1,33 @@
+﻿@inject IViewProductsByNameUseCase viewProductByNameUseCase;
+
+<table class="table table-hover table-spiral">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <ProductListItemComponent productList="listOfProducts">
+
+        </ProductListItemComponent>
+     
+    </tbody>
+
+</table>
+
+@code {
+    private List<Product> listOfProducts = new List<Product>();
+
+    [Parameter]
+    public string searchTerm{ get; set; } = string.Empty;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        listOfProducts = (await viewProductByNameUseCase.ExecuteAsync(this.searchTerm)).ToList();
+    }
+}
